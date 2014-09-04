@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Project SIMBA</title>
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="bootstrap-theme.min.css" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<!-- End -->	
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.png" />
+		<!-- End -->
+
+		<!-- Codigos relacionados a compatibilidade com IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- End -->
+
+	</head>
+
+	<body>
+		<header>
+			<div class="container text-center menu">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#docs">Docs</a>
+				<a href="#exemple">Exemple</a>
+				<a href="https://sourceforge.net/projects/ufmg-simba/" style="color:#f3998f">Download Now</a>
+			</div>
+		</header>
+
+		<div id="home" class="text-center" >
+			<img src="SIMBA.png" />
+		</div>
+		
+		<div id="docs" class="container">
+			<!--bazinga-->	            
+	            <div style="padding-left:20px" role="main">	            	
+	            	<div id="docs_top" class="jumbotron" style="border:1px #ccc solid">
+						  <h1>Welcome to SIMBAdocs!</h1>
+						  <h3>Oficial documentation (english)</h3>
+						  <p><br/></p>
+						  <p><a class="btn btn-primary btn-lg" role="button" href="install">Install now!</a></p>
+					</div>
+					<hr id="about" />
+					<br/><br/>
+					<!-- O que é Simba? -->
+					<h2><b>What is SIMBA?</b></h2>
+					<br/>
+					<div class="alert alert-info" style="text-align:center">
+						SIMBA, <i>SImple Manager for Bacterial Assemblies</i>, is 
+						a Web interface for managing various processes of assembly of bacterial genomes.
+					</div>
+					<p>	
+						Simba was created to assist bioinformaticians to assemble bacterial genomes sequenced with next-generation platforms (NGS) quickly, easily and effectively.			
+					</p>
+					<p><br/></p>
+					<h3><b>Why use SIMBA?</b></h3>
+					<div class="alert alert-info" style="text-align:center">
+						SIMBA allows bioinformaticians do not worry so much about techniques with repetitive activities and focus on the most important:
+						<b>understand and analyze biological questions</b>!
+					</div>
+					<p>
+						Mounts genomes using processes with a high degree of complexity that adopt heuristics to attempt to obtain results closer to the biological reality. Soon, dozens of software is required for completion of all assembly processes.
+					<p>
+						Thus, to realize a fitting is required, in addition to knowledge of the biological part, a large knowledge of operating system and the specific operation of each software. Which leads to a slow learning curve!
+					</p>
+					<p>
+						In addition, many repetitive processes could be reduced with the adoption of automation scripts, which controlled graphical interface, accelerate the process of data processing, assembly and curation.
+					</p>
+					
+					<p><br/></p>
+					<h3><b>How SIMBA works?</b></h3>
+					<div class="alert alert-info" style="text-align:center">
+						<b>SIMBA runs on the Web!</b> Can be run through any browser on any operating system.<br/>
+						SIMBA runs even cellular phones.
+					</div>
+					<p>
+						SIMBA is a wrapper, that integrates multiple tools into a single interface that can be accessed through a browser.
+					</p>
+					<br/>
+					
+					<div class="panel panel-warning">
+				      <div class="panel-heading">
+				        <h3 class="panel-title">Architecture</h3>
+				      </div>
+				      <div class="panel-body">
+				      			        
+				      	<b>Logic of system</b><br/>
+				      	One file with raw data for each project.<br/>
+				        One project can have several attempts assemblies.<br/> 
+				        One assembly has 5 steps of curation (v0.4).		
+				        <br/><br/>	
+				        <b>Client/Server</b>
+				      	</br>
+				      	Despite SIMBA can be accessor for any device with a browser and internet access, it needs a specific structure that must be set only once!
+				       	        
+				      </div>
+				    </div>
+				    
+					<br/><hr id="install"/>
+					
+					<!-- Instalando Simba -->					
+					<h2 ><b>Installing SIMBA in 5 steps</b></h2><br/>
+					<div class="panel panel-warning">
+					      <div class="panel-heading">
+					        <h3 class="panel-title"><b>Step 1: Recommended Hardware Requirements (server)</b></h3>
+					      </div>
+					      <div class="panel-body">
+			            	<p>
+			            		<b>Processor:</b> Intel/AMD octa-core or higher<br/>
+			            		<b>HD:</b> 5TB or higher<br/>
+			            		<b>RAM:</b> 32GB or higher<br/>
+			            	</p>
+			          	</div>
+			        </div>
+	            	<br/>
+	            	<div class="panel panel-warning">
+					      <div class="panel-heading">
+					        <h3 class="panel-title"><b>Step 2: Software Requirements (server)</b></h3>
+					      </div>
+					      <div class="panel-body">
+			            	<p>
+			            		<b>1. Operating System Unix 64bit </b><br/>
+			            		We recommend Ubuntu 14.04<br/><br/>
+			            		
+			            		<b>2. Python (2.6 or higher)</b><br/>
+			            		
+			            		<b>3. Biopython (1.5 or higher)</b><br/>
+			            		<a href="http://biopython.org/DIST/docs/install/Installation.html">Oficial site</a><br/>
+			            		Download biopython: http://biopython.org/wiki/Download.<br/>
+			            		Extract files: tar -xzvpf biopython-X.X.tar.gz<br/>
+			            		Go to the directory and run: python setup.py install<br/><br/>
+			            		
+			            		<b>4. Java (1.7 or higher)</b><br/>
+			            		
+			            		<b>5. PHP (5.4 or higher): modules SQLite and Mycript</b><br/>
+			            		apt-get install php5-sqlite<br/>
+			            		apt-get install php5-mycript<br/><br/>
+			            		
+			            		<b>6. Apache</b><br/>
+			            		apt-get install apache2<br/><br/>
+			            		
+			            		<b>7. NCBI Blast+</b><br/>
+			            		sudo apt-get install ncbi-blast+<br/><br/> 
+			            		
+			            		<b>8. Git (opcional)</b><br/>
+			            		apt-get install git<br/><br/>
+			            	</p>
+			            </div>
+			        </div>
+	            	<br/>
+	            	<div class="panel panel-warning">
+					    <div class="panel-heading">
+					        <h3 class="panel-title"><b>Passo 3: Copying files</b></h3>
+					    </div>
+					    <div class="panel-body">
+					    	cd [apache_diretorio] <br/>
+					    	mkdir simba<br/>
+					    	cd simba<br/>
+					    	git clone http://github.com/dcbmariano/simba<br/>
+						</div>
+					</div>
+	            	<br/>
+	            	<div class="panel panel-warning">
+					    <div class="panel-heading">
+					        <h3 class="panel-title"><b>Passo 4: Configuring access</b></h3>
+					    </div>
+					    <div class="panel-body">
+					    	Enter in folder <b>[apache_diretorio]/simba/app/config</b><br/>
+					    	Open the file "app.php" and change the both lines: 29, modify the url, and 68, change the security key - key (randomly put 32 characters).<br/><br/>
+					    	<b>Ready! SIMBA is already configured!</b>
+						</div>
+					</div>
+					<br/>
+	            	<div class="panel panel-warning">
+					    <div class="panel-heading">
+					        <h3 class="panel-title"><b>Step 5: Accessing the system</b></h3>
+					    </div>
+					    <div class="panel-body">
+					    	Open the browser.<br/>
+					    	Type the internet adress: http://seudominio.com/simba (try http://localhost/simba for local access)<br/>
+					    	<b>User:</b> admin<br/>
+					    	<b>Password:</b> ******<br/>
+						</div>
+					</div>	 
+					<hr/><br/>
+					<!-- Montagens com simba -->
+					<h2 id="montagens"><b>Genome assembly</b></h2>
+					<h3><b>Understanding what is genome assembly</b></h3>
+					<p>Before explaining the operation of Simba is necessary to understand the problem of genome assembly. <br/> Current DNA sequencing platforms (with the exception of PacBio) are able to read with only minor accuracy of DNA. Thus, prior to sequence the need arises to break the DNA into small pieces. <br/> After sequencing, the need to order all the readings taken in the original position arises again, but there is no template to do this! <br /> One solution is to break several different DNA molecules and cells belonging to the same organism at random points, and use the overlap between them to build the original genome again.
+					</p>
+					<img src="assembly.jpg" width="100%" />
+					<center style="font-size: 11px"><i>Source:</i> (adapted) HUSEMANN, P. Bioinformatic Approaches for Genome Finishing, 2011.</center><br/> 
+					<br/>           
+					<p>
+						Sort all readings without the help of a reference is called <b> Mount <i> new </i> </b>. <br/> 
+						However, due to repetitive regions and the regions that tend to have low coverage sequencing, software 
+						Mounting <i> new </i> are not able to automatically reorganize the genome. So, give the name of 
+						contig sequence formed by the maximum possible overlaps between reads. <br/> 
+						After a montage <i> new </i>, several contigs are formed, it is necessary now, sort them. 
+						<br/> 
+						For ordering you can use a reference! A genome of an organism that is phylogenetically, one uses 
+						next and is ordered based on it. 
+						<br/> 
+						Finally, a stage curated assembly, in which it tries to figure out what sequence is required between 
+						contig one another and, thus, to have the complete sequence.
+						
+					</p>
+					<br/>	
+					<h3><b>Using SIMBA</b></h3>
+					
+					<p>
+						<b>Login</b>	
+					</p>
+					<p>
+						To ensure the confidentiality of your data, all pages 
+						criptgrafada are protected by a key based on a random string 
+						32 characters. The first access can be done by entering a username and password 
+						pattern. You can change it in "Control panel". <br/>
+						<b>USER:</b>admin<br/>
+						<b>PASSWORD:</b>******<br/>						
+					</p>
+					<p>
+						You will be redirected
+					</p>
+					<hr id="exemple" /><br/><br/>
+					<!-- Caso de uso -->
+					<h2><b>Use case (EXEMPLE)</b></h2>
+					<p>
+						In this example below, the operation of SIMBA to assemblies of bacterial genomes is shown. 
+						The genome of strain will be assembly <i>Corynebacterium pseudotuberculosis 1002 </i>, sequenced 
+						Ion PGM using simple fragments of ~ 200PB.
+					</p>
+					<br/>
+					<iframe width="560" height="315" src="//www.youtube.com/embed/5cEPXzT36KY" frameborder="0" allowfullscreen></iframe>
+					<br/>
+	            </div>           		 
+            </div>
+		<!--bazinga-end-->
+			
+		</div>
+
+		<!-- Rodape -->
+		<footer>
+			<div style="text-align: center">
+				<img src="minilogo.png" />
+			</div>
+			<div class="container" style="text-align:left;padding-top:100px;font-size:12px;color:#aaa">
+				SIMBA version beta by <a href="http://lgcm.icb.ufmg.br" class="navbar-link">LGCM</a> | Univesidade Federal de Minas Gerais | 2014
+			</div>
+			<script src="jquery.js"></script>
+			<script src="bootstrap.min.js"></script>
+		</footer>
+		<!-- End -->
+
+	</body>
+</html>
