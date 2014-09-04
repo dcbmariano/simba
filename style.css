@@ -1,0 +1,15 @@
+/* Style.css */
+* { padding:0; margin:0; }
+body { color:#111; background-image:url(background.jpg); }
+header { height: 60px; background-color:#1b1b1b;  box-shadow: 10px 5px 5px #000; position: fixed; width: 100%; }
+footer { height: 200px; background-color: #222; padding:10px; color:#f4f4f4;}
+
+/* ID */
+#home{ padding:100px 0 80px 0; width: 100%; background-image: url(bg_p1.jpg); background-position:center; background-color: #111; }
+#docs{ padding:20px;}
+
+/* Class */
+.content { margin:30px 0; padding:20px; background-color:#fbfbfb; }
+.menu { padding: 20px; }
+.menu a{ padding: 0px 50px; color:#6c6c6c; text-shadow: 1px 1px 1px #111; }
+.menu a:hover{ color:#f97e70; }
