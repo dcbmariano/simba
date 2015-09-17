@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Project SIMBA</title>
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="bootstrap-theme.min.css" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<!-- End -->	
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="favicon.png" />
+		<!-- End -->
+
+		<!-- Codigos relacionados a compatibilidade com IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- End -->
+
+	</head>
+
+	<body>
+		<header>
+			<div class="container text-center menu">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#docs">Docs</a>
+				<a href="#requirements">Requirements</a>
+				<a href="https://sourceforge.net/projects/ufmg-simba/" style="color:#f3998f" target="_blank">Download Now</a>
+			</div>
+		</header>
+
+		<div id="home" class="text-center" >
+			<img src="SIMBA.png" />
+		</div>
+
+		<div style="height:300px; background-color: #f3998f">
+
+			<div id="about" style="height:50px"><!-- SEPARADOR --></div>	
+
+			<div class="container" style="padding:20px">
+				<h1><b>SIMBA is a Genome Assembly Project Management System</b></h1>
+				<p><b>SIMBA</b>, SImple Manager for Bacterial Assemblies, is a Web interface for
+					managing assembly projects of bacterial genomes. SIMBA was created to
+					assist bioinformaticians to assemble bacterial genomes sequenced with NextGeneration
+					Sequencing (NGS) platforms quickly, easily and effectively. SIMBA
+					also is open source tool, i.e., can be freely downloaded, shared and modified.
+				</p>
+			</div>
+
+		</div>
+		
+		<div class="container" style="padding:20px">
+		
+			<div class="row">
+
+				<!-- element 1 -->
+				<div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+					    <img src="simba_git.jpg"  class="img-thumbnail" alt="GitHub">
+					    <div class="caption">
+						    <h3>SIMBA GitHub</h3>
+						    <p>SIMBA is also available at GitHub. Browse the SIMBA source code at GitHub and contribute to the SIMBA developers community.</p>
+						    <p><a href="https://github.com/dcbmariano/simba" class="btn btn-danger" role="button">Visit now!</a> </p>
+					    </div>
+				    </div>
+				</div>
+
+				<!-- element 2 -->
+				<div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+					    <img src="simba_vm.jpg" class="img-thumbnail" alt="SIMBA VM">
+					    <div class="caption">
+						    <h3>SIMBA VM</h3>
+						    <p>Download the fantastic SIMBA Virtual Machine and test SIMBA without install the basic requirements. Requires a software to view virtual machines. </p>
+						    <p><a href="http://www.aquacen.com.br/SIMBA_CentOS.ova" class="btn btn-danger" role="button">Download now!</a> </p>
+					    </div>
+				    </div>
+				</div>
+
+				<!-- element 3 -->
+				<div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+					    <img src="simba_apache.jpg" alt="SIMBA Apache" class="img-thumbnail">
+					    <div class="caption">
+						    <h3>SIMBA in my Webserver</h3>
+						    <p>Download now the last stable version of SIMBA. Requires Linux, Apache Web Server, PHP 5.3 or superior, Biopython and BLAST.</p>
+						    <p><a href="https://sourceforge.net/projects/ufmg-simba/" class="btn btn-danger" role="button">Download now!</a> </p>
+					    </div>
+				    </div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="docs" style="height:50px"><!-- SEPARADOR --></div>	
+
+		<div class="container">
+			            
+	            <div style="padding:20px" role="main">	            	
+	            	<div id="docs_top" class="jumbotron" style="border:1px #ccc solid">
+						  <h1>Download SIMBAdocs!</h1>
+						  <h3>Oficial documentation (english)</h3>
+						  <p><br/></p>
+						  <p><a class="btn btn-danger btn-lg" role="button" href="documentation.pdf" target="_blank">Download now!</a></p>
+					</div>
+					
+					<div id="requirements" style="height:50px"><!-- SEPARADOR --></div>	
+
+					<h3><b>SIMBA BASIC REQUIREMENTS</b></h3>
+<pre>
+The basic requirements for SIMBA installation are: 
+(i) Linux Operational System 64 bit (we recommend Ubuntu 14.04 or CentOS 6.4); 
+(ii) Apache Server; 
+(iii) PHP 5.3 or superior with libraries Mcrypt, Imagick and PHP-SQLite; 
+(iv) Python with library Biopython; and 
+(v) NCBI-BLAST+.
+
+
+<br/><b>Installing basic requirements in O. S. Ubuntu 14.04</b>
+Apache server  Web server required to manage SIMBA pages which will be accessed by a browser. In the Linux terminal type the following command line: 
+•	sudo apt-get install apache2 
+
+SIMBA also requires Apache mod_rewrite capability. It can be enabled by editing the Apache list of mods-enabled.
+•	sudo gedit /etc/apache2/sites-available/default
+
+Edit the file based on the information provided in Table 1.
+Table 1. Configuration to enable mod-rewrite in Apache Server.
+
+Where you see:
+	
+
+<Directory /var/www/>
+Options Indexes FollowSymLinks MultiViews
+AllowOverride None
+Order allow,deny
+Allow from all
+</Directory>	
+
+
+
+Change to:
+
+<Directory /var/www/>
+Options Indexes FollowSymLinks MultiViews
+AllowOverride All
+Order allow,deny
+Allow from all
+</Directory>
+
+Now, run the command below and restart the Apache server.
+•	sudo a2enmod rewrite
+•	sudo service apache2 restart
+
+PHP5 and libraries  These are required to interpret the source code of SIMBA back-end. Mcrypt is a security library used to encrypt data, and SQLite is the database management system (DBMS) used by SIMBA.
+•	sudo apt-get install php5 php5-mcrypt php5-sqlite php5-imagick
+<br/>
+Python and Biopython library  These are required to run sequence analysis by SIMBA. Python is installed by default in Linux. To install the Biopython library it is necessary to download the installation package at http://biopython.org/wiki/Download. Uncompressing the Biopython package, open the folder with Biopython in the Linux terminal and type the following on the command line to build and install: 
+
+•	python setup.py build
+•	python setup.py test
+•	sudo python setup.py install
+
+<br/>
+NCBI-BLAST+  This is required to run local alignments between sequences using BLAST. In the Linux terminal, type the following command: 
+•	sudo apt-get install ncbi-blast+ 
+3	INSTALLING SIMBA
+
+To install SIMBA, first download the source code at http://ufmg-simba.sourceforge.net. Extract the file downloaded in the directory /var/www. Give permission to apache user through the command lines:
+•	chown –R www-data:www-data /var/www/simba
+•	chmod –R 755 /var/www/simba
+
+Configuring SIMBA
+SIMBA requires two simple configurations: (i) the URL of your application; and (ii) a security random key of 32 bit. Open the file /var/www/samba/app/config/app.php with a text editor. Edit the lines 29 (if you don’t have a personal URL use http://localhost/simba/public for only local access) and 68 (type 32 random characters).
+
+Accessing SIMBA by a browser
+Now, SIMBA can be accessed by a browser, as Google Chrome, Firefox, Opera or Safari, using the address configured in the “app.php” file. We point out that SIMBA can run on Internet Explorer, however some pages can present layout problems. We recommend the Google Chrome browser.
+</pre>
+<br/>
+<h3><b>SIMBA VM requirements:</b></h3>
+<pre>
+To run SIMBA VM is necessary a virtualization software, e.g.:
+
+WINDOWS: 
+VirtualBox 
+VMware Player 
+VMware vCenter Converter 
+VMware Workstation 
+
+MAC OS:
+VM VirtualBox 
+VMware OVF Tool 
+
+LINUX:
+VMware OVF Tool 
+VMware Workstation 
+</pre>			
+		</div></div>  
+
+		<!-- Rodape -->
+		<footer>
+			<div style="text-align: center">
+				<img src="minilogo.png" />
+			</div>
+			<div class="container" style="text-align:left;padding-top:100px;font-size:12px;color:#aaa">
+				SIMBA version FINAL by <a href="http://lgcm.icb.ufmg.br" class="navbar-link">LGCM</a> | Univesidade Federal de Minas Gerais | 2014
+			</div>
+			<script src="jquery.js"></script>
+			<script src="bootstrap.min.js"></script>
+			<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64844635-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+		</footer>
+		<!-- End -->
+
+	</body>
+</html>

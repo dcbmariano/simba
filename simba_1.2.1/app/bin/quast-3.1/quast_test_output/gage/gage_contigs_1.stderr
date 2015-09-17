@@ -1,0 +1,18 @@
+1: PREPARING DATA
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "/var/www/html/simba/app/bin/quast-3.1/quast_test_output/gage/tmp/contigs_1.fasta.ntref" of length 10001
+# construct suffix tree for sequence of length 10001
+# (maximum reference length is 536870908)
+# (maximum query length is 4294967295)
+# CONSTRUCTIONTIME /var/www/html/simba/app/bin/quast-3.1/libs/MUMmer3.23-linux/mummer /var/www/html/simba/app/bin/quast-3.1/quast_test_output/gage/tmp/contigs_1.fasta.ntref 0.00
+# reading input file "/var/www/html/simba/app/bin/quast-3.1/quast_test_output/quast_corrected_input/contigs_1.fasta" of length 6712
+# matching query-file "/var/www/html/simba/app/bin/quast-3.1/quast_test_output/quast_corrected_input/contigs_1.fasta"
+# against subject-file "/var/www/html/simba/app/bin/quast-3.1/quast_test_output/gage/tmp/contigs_1.fasta.ntref"
+# COMPLETETIME /var/www/html/simba/app/bin/quast-3.1/libs/MUMmer3.23-linux/mummer /var/www/html/simba/app/bin/quast-3.1/quast_test_output/gage/tmp/contigs_1.fasta.ntref 0.00
+# SPACE /var/www/html/simba/app/bin/quast-3.1/libs/MUMmer3.23-linux/mummer /var/www/html/simba/app/bin/quast-3.1/quast_test_output/gage/tmp/contigs_1.fasta.ntref 0.02
+4: FINISHING DATA
+Filtering alignments
+Extracting alignment coordinates
+Analyzing SNPs
+Extracting alignment breakpoints
+Generating report file

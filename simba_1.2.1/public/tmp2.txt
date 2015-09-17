@@ -1,0 +1,30 @@
+[H[2J(B[mtop - 16:44:14 up 82 days,  6:05,  2 users,  load average: 0.07, 0.04, 0.05(B[m[39;49m[K
+Tasks:(B[m[39;49m(B[m 263 (B[m[39;49mtotal,(B[m[39;49m(B[m   1 (B[m[39;49mrunning,(B[m[39;49m(B[m 220 (B[m[39;49msleeping,(B[m[39;49m(B[m   0 (B[m[39;49mstopped,(B[m[39;49m(B[m  42 (B[m[39;49mzombie(B[m[39;49m[K
+Cpu(s):(B[m[39;49m(B[m  3.1%(B[m[39;49mus,(B[m[39;49m(B[m  0.2%(B[m[39;49msy,(B[m[39;49m(B[m  0.0%(B[m[39;49mni,(B[m[39;49m(B[m 96.6%(B[m[39;49mid,(B[m[39;49m(B[m  0.1%(B[m[39;49mwa,(B[m[39;49m(B[m  0.0%(B[m[39;49mhi,(B[m[39;49m(B[m  0.0%(B[m[39;49msi,(B[m[39;49m(B[m  0.0%(B[m[39;49mst(B[m[39;49m[K
+Mem: (B[m[39;49m(B[m  8172384k (B[m[39;49mtotal,(B[m[39;49m(B[m  7622476k (B[m[39;49mused,(B[m[39;49m(B[m   549908k (B[m[39;49mfree,(B[m[39;49m(B[m   212856k (B[m[39;49mbuffers(B[m[39;49m[K
+Swap:(B[m[39;49m(B[m  8383484k (B[m[39;49mtotal,(B[m[39;49m(B[m   240828k (B[m[39;49mused,(B[m[39;49m(B[m  8142656k (B[m[39;49mfree,(B[m[39;49m(B[m  4826736k (B[m[39;49mcached(B[m[39;49m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                (B[m[39;49m[K
+(B[m 5294 root      20   0  319m  74m  10m S    2  0.9  45:12.69 Xorg                                   (B[m[39;49m
+(B[m    1 root      20   0 24568 2196 1252 S    0  0.0   0:11.52 init                                   (B[m[39;49m
+(B[m    2 root      20   0     0    0    0 S    0  0.0   0:00.21 kthreadd                               (B[m[39;49m
+(B[m    3 root      20   0     0    0    0 S    0  0.0   0:04.50 ksoftirqd/0                            (B[m[39;49m
+(B[m    5 root       0 -20     0    0    0 S    0  0.0   0:00.00 kworker/0:0H                           (B[m[39;49m
+(B[m    7 root      RT   0     0    0    0 S    0  0.0   0:00.35 migration/0                            (B[m[39;49m
+(B[m    8 root      20   0     0    0    0 S    0  0.0   0:00.00 rcu_bh                                 (B[m[39;49m
+(B[m    9 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuob/0                                (B[m[39;49m
+(B[m   10 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuob/1                                (B[m[39;49m
+(B[m   11 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuob/2                                (B[m[39;49m
+(B[m   12 root      20   0     0    0    0 S    0  0.0   0:00.00 rcuob/3                                (B[m[39;49m
+(B[m   13 root      20   0     0    0    0 S    0  0.0   2:25.82 rcu_sched                              (B[m[39;49m
+(B[m   14 root      20   0     0    0    0 S    0  0.0   0:47.32 rcuos/0                                (B[m[39;49m
+(B[m   15 root      20   0     0    0    0 S    0  0.0   0:31.44 rcuos/1                                (B[m[39;49m
+(B[m   16 root      20   0     0    0    0 S    0  0.0   0:51.23 rcuos/2                                (B[m[39;49m
+(B[m   17 root      20   0     0    0    0 S    0  0.0   0:32.31 rcuos/3                                (B[m[39;49m
+(B[m   18 root      RT   0     0    0    0 S    0  0.0   0:11.93 watchdog/0                             (B[m[39;49m
+(B[m   19 root      RT   0     0    0    0 S    0  0.0   0:11.84 watchdog/1                             (B[m[39;49m
+(B[m   20 root      RT   0     0    0    0 S    0  0.0   0:00.13 migration/1                            (B[m[39;49m
+(B[m   21 root      20   0     0    0    0 S    0  0.0   0:00.34 ksoftirqd/1                            (B[m[39;49m
+(B[m   23 root       0 -20     0    0    0 S    0  0.0   0:00.00 kworker/1:0H                           (B[m[39;49m
+(B[m   24 root      RT   0     0    0    0 S    0  0.0   0:09.95 watchdog/2                             (B[m[39;49m
+(B[m   25 root      RT   0     0    0    0 S    0  0.0   0:00.94 migration/2                            (B[m[39;49m[6;1H[K[31;1H[?12l[?25h

@@ -1,0 +1,11 @@
+PASS	Basic Statistics	default.fastq
+WARN	Per base sequence quality	default.fastq
+PASS	Per sequence quality scores	default.fastq
+FAIL	Per base sequence content	default.fastq
+PASS	Per base GC content	default.fastq
+PASS	Per sequence GC content	default.fastq
+PASS	Per base N content	default.fastq
+WARN	Sequence Length Distribution	default.fastq
+WARN	Sequence Duplication Levels	default.fastq
+PASS	Overrepresented sequences	default.fastq
+WARN	Kmer Content	default.fastq

@@ -1,0 +1,8 @@
+make: Entering directory `/var/www/html/simba/app/bin/quast-3.1/libs/glimmer/src'
+g++ -g -I /usr/include/malloc -c glimmerhmm.c
+g++ -g -I /usr/include/malloc -c graph.c
+g++ -g -I /usr/include/malloc -c sites.c
+g++ -g -I /usr/include/malloc -c tree_util_prob.c
+g++ -g -I /usr/include/malloc -c util.c
+g++ -g -I /usr/include/malloc -o ../glimmerhmm glimmerhmm.o graph.o sites.o tree_util_prob.o util.o  -lm 
+make: Leaving directory `/var/www/html/simba/app/bin/quast-3.1/libs/glimmer/src'

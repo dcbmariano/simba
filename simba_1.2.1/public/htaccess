@@ -1,0 +1,5 @@
+// Adicionar ao htaccess
+php_value upload_max_filesize 1800M
+php_value post_max_size 1800M
+php_value max_input_time 1800
+php_value max_execution_time 1800

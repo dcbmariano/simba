@@ -1,0 +1,20 @@
+#<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+#</IfModule>
+
+php_value upload_max_filesize 1800M
+php_value post_max_size 1800M
+php_value max_input_time 1800
+php_value max_execution_time 1800

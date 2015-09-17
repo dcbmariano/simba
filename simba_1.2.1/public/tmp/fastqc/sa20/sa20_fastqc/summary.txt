@@ -1,0 +1,11 @@
+PASS	Basic Statistics	sa20.fastq
+WARN	Per base sequence quality	sa20.fastq
+PASS	Per sequence quality scores	sa20.fastq
+FAIL	Per base sequence content	sa20.fastq
+PASS	Per base GC content	sa20.fastq
+PASS	Per sequence GC content	sa20.fastq
+PASS	Per base N content	sa20.fastq
+WARN	Sequence Length Distribution	sa20.fastq
+WARN	Sequence Duplication Levels	sa20.fastq
+PASS	Overrepresented sequences	sa20.fastq
+WARN	Kmer Content	sa20.fastq

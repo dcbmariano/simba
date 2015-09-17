@@ -1,0 +1,11 @@
+PASS	Basic Statistics	test3.fastq
+FAIL	Per base sequence quality	test3.fastq
+PASS	Per sequence quality scores	test3.fastq
+FAIL	Per base sequence content	test3.fastq
+FAIL	Per base GC content	test3.fastq
+PASS	Per sequence GC content	test3.fastq
+PASS	Per base N content	test3.fastq
+WARN	Sequence Length Distribution	test3.fastq
+WARN	Sequence Duplication Levels	test3.fastq
+PASS	Overrepresented sequences	test3.fastq
+FAIL	Kmer Content	test3.fastq

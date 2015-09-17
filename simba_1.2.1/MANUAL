@@ -1,0 +1,63 @@
+SIMBA Manual 
+Version: 1.1.4
+
+-----------------------------------------------------------------------------------------------------
+
+Chapter 1: How install SIMBA?
+
+SIMBA server just run in Linux 64bit (Ubuntu and CentOS).
+
+Copy SIMBA folder to your [www_folder].
+Transfer the privileges of the owner of the folder to apache:
+Run: "chown -R apache:apache ./simba" | or (depends of version) | "chown -R www-data:www-data ./simba"
+And run: "chmod -R 755 ./simba"
+
+-----------------------------------------------------------------------------------------------------
+
+Chapter 2: Configure SIMBA
+Open the file ./simba/app/config/app.php
+- line 29: change the address of your website (url)
+- line 68: change the key (type 32 random characters)
+
+-----------------------------------------------------------------------------------------------------
+
+Chapter 3: Queue manager or direct run
+
+If you use queue manager, create a queue called: "assembly"
+If you don't use, all the assembly will run in background using "nohup ... &"
+Let's configure it:
+
+Open the file ./simba/app/controllers/ProjectsController.php
+- search the function "run_new_assembly($id)"
+- line 214 (this line can be another, search by a variable called $query in commented line): 
+	copy this line and put its after the another variable called $query 
+	(for exemplo, copy this line and paste its in the line 224, after the another variable $query).
+	Repeat this for the case "mira", "mira4", "newbler" and "minia".
+	   
+-----------------------------------------------------------------------------------------------------
+
+Chapter 4: Using Newbler and Minia
+
+Newbler and Minia are not open source softwares, but they are free to educational use.
+SIMBA can't distribute the two software, but we development parsers for the results of both softwares
+.
+In this case open the pages of Newbler and Minia, do a register, and download the softwares.
+Minia: put the minia software in the folder ./simba/app/bin/. 
+Newbler: put the folder 454 in the folder ./simba/app/bin/.  
+
+-----------------------------------------------------------------------------------------------------
+
+Chapter 5: Acessing SIMBA
+Open a browser and type the internet address of SIMBA.
+Type user and password.
+User: admin
+Password: admin
+
+Don't forget: change the password!
+
+-----------------------------------------------------------------------------------------------------
+
+More info: http://ufmg-simba.sourceforge.net
+
+Thanks to use SIMBA
+:)

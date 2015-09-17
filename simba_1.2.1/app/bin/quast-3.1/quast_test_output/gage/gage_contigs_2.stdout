@@ -1,0 +1,42 @@
+Compiling MUMmer
+Contig Stats
+Total units: 2
+Reference: 10000
+BasesInFasta: 5460
+Min: 2100
+Max: 3360
+N10: 3360 COUNT: 1
+N25: 3360 COUNT: 1
+N50: 2100 COUNT: 2
+N75: 0 COUNT: 0
+E-size:1569.96
+
+Genome Size: 10000
+Assembly Size: 5460
+Chaff bases: 0
+Missing Reference Bases: 4539(45.39%)
+Missing Assembly Bases: 0(0.00%)
+Missing Assembly Contigs: 0(0.00%)
+Duplicated Reference Bases: 0
+Compressed Reference Bases: 0
+Bad Trim: 0
+Avg Idy: 100.00
+SNPs: 0
+Indels < 5bp: 0
+Indels >= 5: 2
+Inversions: 0
+Relocation: 0
+Translocation: 0
+
+Corrected Contig Stats
+Total units: 4
+Reference: 10000
+BasesInFasta: 5461
+Min: 700
+Max: 2100
+N10: 2100 COUNT: 1
+N25: 1471 COUNT: 2
+N50: 700 COUNT: 4
+N75: 0 COUNT: 0
+E-size:847.99
+

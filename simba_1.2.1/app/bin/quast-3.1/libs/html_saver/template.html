@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <style type="text/css">
+        body {
+            padding-bottom: 30px;
+        }
+        .content {
+            margin-left: 120px;
+            padding-top: 50px;
+            clear: both;
+        }
+        #header {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        /*#report_date { *//* not used in Quast html report */
+            /*margin-top: -13px;*/
+            /*margin-bottom: 20px;*/
+        /*}*/
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/report.css" />
+
+    <script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/static/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
+
+    <script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
+    <script type="text/javascript" src="/static/scripts/utils.js"></script>
+    <script type="text/javascript" src="/static/scripts/build_total_report_common.js"></script>
+    <script type="text/javascript" src="/static/{{ buildtotalreport }}"></script>
+    <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>
+    {{ gc_script }}
+    <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/build_report_common.js"></script>
+    {{ metascripts }}
+    <script type="text/javascript" src="/static/{{ buildreport }}"></script>
+    <script type="text/javascript" src="/static/dragtable.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            buildReport();
+
+            dragTable.init();
+
+            $('#contigs_are_ordered').show();
+
+            $("[rel=tooltip]").tooltip({ animation: false, });
+        });
+    </script>
+</head>
+
+<body>
+<div class="content">
+    <div id='header'>
+        <h1 style='font-size: 1.5em;'><span class='smallcapitals' id='quast_name'>QUAST</span>
+            <span id='report_name'>report</span></h1>
+        <p id='report_date'></p>
+        <p id='mincontig'>Loading...</p>
+        <p id='per_ref_msg'></p>
+        <p id='krona'></p>
+
+        <p id="data_set_p">
+                <span style="display: none;" id="reference_length">
+                    Reference size:
+                    <span class='val'></span><span class='rhs'>&nbsp;</span>bp,
+                </span>
+
+                <span style="display: none;" id="reference_gc">G+C content:
+                    <span class='val'></span><span class='rhs'>&nbsp;</span>%
+                </span>
+                
+     </span><span style="display: none;" id="reference_chr">, chromosomes: <span class='val'></span>
+            </span>
+            
+            <span style="display: none;" id="reference_reads"><br>Total reads:
+                <span class='val'></span></span><span style='display: none;'>
+
+     </span><span style="display: none;" id="reference_mappedreads">, mapped:
+                <span class='val'></span></span><span style='display: none;'>
+
+     </span><span style="display: none;" id="reference_pairedreads">, properly paired: <span class='val'></span>
+            </span>
+
+            <span style="display: none;" id="reference_genes"><br>
+                <span class='val'></span> genes</span><span style='display: none;'>
+
+                <span style="display: none;" id="reference_operons">,
+                    <span class='val'></span> operons
+                </span>
+            </span>
+        </p>
+        <p>
+        <span id="main_ref_genome">
+        </p>
+    </div>
+
+    <noscript>
+        <div style="margin-left: 0;">
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your
+            browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            We need JavaScript to build report and plots.
+        </div>
+    </noscript>
+
+    <div class='report-and-plots'>
+        <div class='report' id='main_report'>
+                <div id="heatmap_header" style='display: none;'>
+                <div style="padding-right: 10px; display: inline-block; vertical-align:top;">
+                    <canvas id="gradientHeatmap" width="150" height="6"></canvas>
+                    <div style="margin-left: 0; text-align: justify;">
+                        <span class="heatmap_legend">Worst</span>
+                        <span style="margin-left: -5px;" class="heatmap_legend">Median</span>
+                        <span class="heatmap_legend">Best</span>
+                        <span class="heatmap_legend" style='width: 100%; height: 0;'></span>
+                    </div>
+                </div>
+                <label for="heatmaps_chbox"><input type="checkbox" checked="checked" id="heatmaps_chbox">Show heatmap</label>
+            </div>
+        </div>
+        <div class='plots'>
+            <table style='margin: -3px;'>
+                <tr id='all-switches'>
+                    <td>
+                        <div id='plots-switches'></div>
+                    </td>
+                    <td style='text-align: right; padding-right: 22px;'>
+                        <span id='scale-placeholder'></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id='plot-placeholder' style=''></div>
+                    </td>
+                    <td>
+                        <div id='legend-placeholder'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
+                        <p id="gc_info">Contigs are broken into nonoverlapping 100 bp windows.
+                            Plot shows numbers of windows for each GC percentage.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="clear: left"></div>
+        <div style="clear: right"></div>
+
+        <div class='json-code'>
+            <div id='total-report-json'>
+                {{ totalReport }}
+            </div>
+            <div id='qualities-json'>
+                {{ qualities }}
+            </div>
+            <div id='main-metrics-json'>
+                {{ mainMetrics }}
+            </div>
+
+            <div id="contigs-lengths-json">
+                {{ contigsLengths }}
+            </div>
+            <div id='assemblies-lengths-json'>
+                {{ assembliesLengths }}
+            </div>
+            <div id='reference-length-json'>
+                {{ referenceLength }}
+            </div>
+            <div id='tick-x-json'>
+                {{ tickX }}
+            </div>
+            <div id='coord-nx-json'>
+                {{ coordNx }}
+            </div>
+            <div id='coord-ngx-json'>
+                {{ coordNGx }}
+            </div>
+            <div id='coord-nax-json'>
+                {{ coordNAx }}
+            </div>
+            <div id='coord-ngax-json'>
+                {{ coordNGAx }}
+            </div>
+            <div id='genes-in-contigs-json'>
+                {{ genesInContigs }}
+            </div>
+            <div id='operons-in-contigs-json'>
+                {{ operonsInContigs }}
+            </div>
+            <div id='summary-json'>
+                [{{ num_contigs }},
+                {{ Largest_contig }},
+                {{ Total_length }},
+                {{ N50 }},
+                {{ num_misassemblies }},
+                {{ Misassembled_contigs_length }},
+                {{ num_mismatches_per_100_kbp }},
+                {{ num_indels_per_100_kbp }},
+                {{ num_N's_per_100_kbp }},
+                {{ Genome_fraction }},
+                {{ Duplication_ratio }},
+                {{ NGA50 }}]
+            </div>
+            <div id='misassemblies-json'>
+                {{ allMisassemblies }}
+            </div>
+            <div id='krona-json'>
+                {{ krona }}
+            </div>
+            <div id='gc-json'>
+                {{ gcInfos }}
+            </div>
+        </div>
+    </div>
+
+    <div class='json-code'>
+        <div id='glossary-json'>
+            {{ glossary }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

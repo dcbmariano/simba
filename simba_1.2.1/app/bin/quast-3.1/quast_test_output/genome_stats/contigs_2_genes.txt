@@ -1,0 +1,9 @@
+ID or #		Start	End	Type
+=========================================
+9		5683	6459	partial
+986		337	2799	partial
+987		2801	3733	partial
+988		3734	5020	partial
+1463		9306	9893	partial
+1506		6529	7959	partial
+1507		8238	9191	complete
